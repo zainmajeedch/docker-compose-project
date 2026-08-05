@@ -33,7 +33,7 @@ services:
 
   worker:
     image: php:8.3-cli
-    container_name: worker
+#    container_name: worker
     working_dir: /var/www/html
     volumes:
       - ./worker:/var/www/html
