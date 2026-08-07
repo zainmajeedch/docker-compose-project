@@ -125,6 +125,47 @@ MariaDB stores its data in a persistent Docker volume.
 - MariaDB
 - Redis
 
+
+## Composer Support
+
+This project includes Composer support inside the PHP Docker container.
+
+### Features
+
+* Composer installed in the custom PHP Docker image.
+* Dependency management using `composer.json` and `composer.lock`.
+* `vendor/` directory generated automatically.
+* Example packages installed:
+
+  * `monolog/monolog`
+  * `nesbot/carbon`
+
+### Build the containers
+
+```bash
+docker compose build --no-cache
+docker compose up -d
+```
+
+### Verify Composer
+
+```bash
+docker compose exec php composer --version
+```
+
+### Install project dependencies
+
+```bash
+docker compose exec php composer install
+```
+
+### List installed packages
+
+```bash
+docker compose exec php composer show
+```
+
+
 ## Author
 
 **Muhammad Zain Majeed**

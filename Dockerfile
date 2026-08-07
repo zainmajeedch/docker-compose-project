@@ -19,6 +19,7 @@ RUN apt-get update && apt-get install -y \
     libsnmp-dev \
     libtidy-dev \
     libenchant-2-dev \
+    unzip \
 && rm -rf /var/lib/apt/lists/*
 
 RUN docker-php-ext-configure gd \
@@ -55,9 +56,9 @@ RUN docker-php-ext-configure gd \
     xsl \
     zip
 
-
 RUN pecl install redis \
     && docker-php-ext-enable redis
 
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 CMD ["php-fpm"]

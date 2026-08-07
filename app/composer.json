@@ -1,0 +1,9 @@
+{
+    "name": "zain/docker-compose-project",
+    "description": "Docker Compose PHP project",
+    "type": "project",
+    "require": {
+        "nesbot/carbon": "^2.57",
+        "monolog/monolog": "^3.10"
+    }
+}
