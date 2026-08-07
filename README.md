@@ -128,7 +128,7 @@ MariaDB stores its data in a persistent Docker volume.
 
 ## Composer Support
 
-This project includes Composer support inside the PHP Docker container.
+Composer is installed manually inside the custom PHP Docker image using the official Composer installer.
 
 ### Features
 
